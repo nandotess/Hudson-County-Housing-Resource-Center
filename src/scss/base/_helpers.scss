@@ -1,0 +1,101 @@
+// Create breakpoint specific justify styles, missing in foundation by default
+@each $breakpoint in $breakpoint-classes {
+	@if $breakpoint == small {
+        // DO NOTHING
+	} @else {
+		@include breakpoint($breakpoint) {
+            // Horizontal alignments
+
+            // Default
+			.#{$breakpoint}-align-left {
+				justify-content: flex-start;
+            }
+
+			.#{$breakpoint}-align-right {
+				justify-content: flex-end;
+            }
+
+			.#{$breakpoint}-align-center {
+				justify-content: center;
+            }
+
+			.#{$breakpoint}-align-justify {
+                justify-content: space-between;
+            }
+
+			.#{$breakpoint}-align-spaced {
+                justify-content: space-around;
+            }
+
+            // Vertical alignments
+
+            // Default
+            .#{$breakpoint}-align-stretch {
+                align-items: stretch;
+            }
+
+            .#{$breakpoint}-align-top {
+                align-items: flex-start;
+            }
+
+            .#{$breakpoint}-align-middle {
+                align-items: center;
+            }
+
+            .#{$breakpoint}-align-bottom {
+                align-items: flex-end;
+            }
+		}
+	}
+}
+
+// ###
+// Wider grid-container
+// ###
+
+// Instead xlarge, this grid container will have max-width: 1440px
+.hrc-grid-container-wide {
+    max-width: rem-calc(1440);
+}
+
+.hrc-grid-container-wide-no-padding {
+    @extend .hrc-grid-container-wide;
+
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ###
+// Others
+// ###
+
+.sr-only {
+    font-size: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+a.hrc-skip-nav {
+	background-color: $white;
+	color: $dark-gray;
+    left: rem-calc(-1000);
+    height: rem-calc(1);
+    overflow: hidden;
+    padding: rem-calc(5) rem-calc(10);
+    position: absolute;
+    text-align: left;
+    top: rem-calc(-1000);
+    width: rem-calc(1);
+    z-index: 1;
+
+    &:active, &:focus, &:hover {
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+}

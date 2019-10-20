@@ -1,0 +1,16 @@
+.hrc-post-image {
+	float: left;
+	margin: 0 rem-calc(30) rem-calc(15) 0;
+	width: rem-calc(400);
+}
+
+strong {
+	.hrc-post-content & {
+		@extend .h3;
+		color: $pastel-red;
+	}
+}
+
+.hrc-comp-post-related-posts {
+	padding-top: 0;
+}

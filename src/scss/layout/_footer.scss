@@ -1,0 +1,32 @@
+.hrc-footer {
+    background-color: $marine;
+    color: $light-gray;
+}
+
+.hrc-nav-footer-list.menu {
+    @include breakpoint(tablet) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.hrc-nav-footer-item {
+    @include breakpoint(tablet) {
+        flex: 0 0 50%;
+    }
+}
+
+.hrc-footer-copyright {
+    margin-bottom: 0;
+    margin-top: $section-padding-mobile / 2;
+	// text-align: right;
+	text-align: center;
+
+    @include breakpoint(tablet) {
+        margin-top: $section-padding-desktop / 2;
+    }
+
+    // @include breakpoint(large) {
+    //     text-align: center;
+    // }
+}

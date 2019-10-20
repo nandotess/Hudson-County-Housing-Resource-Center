@@ -1,0 +1,74 @@
+.button {
+    box-shadow: 0 rem-calc(3) rem-calc(6) 0 rgba($black, 0.16);
+    font-weight: $font-weight-bold;
+    height: auto;
+    text-decoration: none;
+
+    @include breakpoint(tablet down) {
+        font-size: rem-calc(17); /* 85% of large */
+    }
+
+    // ## LARGE ##
+
+    &.large {
+        @include breakpoint(large) {
+            padding-left: rem-calc(75);
+            padding-right: rem-calc(75);
+        }
+    }
+
+    // ## Secondary ##
+
+    &.secondary {
+        background-color: $pastel-red;
+
+        &:hover,
+        &:focus {
+            background-color: $pastel-red-60;
+        }
+    }
+
+    // ## Donate button ##
+
+    .hrc-header-buttons & {
+        @include breakpoint(tablet down) {
+            box-shadow: none;
+            background-color: transparent;
+            padding: rem-calc(10) 0;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+
+            &.secondary {
+                color: $pastel-red;
+
+                &:hover,
+                &:focus {
+                    color: $pastel-red-60;
+                }
+            }
+
+            .hrc-off-canvas & {
+                // .h3 styles
+                font-size: rem-calc(24);
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+
+    // ## Over dark section ##
+
+    &.white {
+        background-color: $white;
+        border-color: $white;
+        color: $marine;
+
+        &:hover,
+        &:focus {
+            background-color: $light-gray;
+            color: $marine;
+        }
+    }
+}

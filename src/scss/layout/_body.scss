@@ -1,0 +1,33 @@
+.hrc-comp {
+    padding: $section-padding-mobile 0;
+
+    @include breakpoint(tablet) {
+        padding: $section-padding-desktop 0;
+    }
+
+    .hrc-comp &,
+    &.hrc-comp-post {
+        background-color: transparent;
+        padding: 0;
+
+        @include breakpoint(tablet) {
+            padding: 0;
+        }
+	}
+}
+
+.hrc-page {
+    padding: $section-padding-mobile 0;
+
+    @include breakpoint(tablet) {
+        padding: $section-padding-desktop 0;
+    }
+
+    &.hrc-page-blocks {
+        padding: 0;
+
+        @include breakpoint(tablet) {
+            padding: 0;
+        }
+    }
+}

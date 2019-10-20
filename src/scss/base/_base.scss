@@ -1,0 +1,87 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    @include hrc-body-margin-top;
+
+    font-size: rem-calc(17); /* 85% of large */
+    overflow-x: hidden;
+
+    @include breakpoint(large) {
+        font-size: rem-calc(20);
+    }
+}
+
+h1, .h1,
+h2, .h2 {
+	font-family: $font-lato;
+    font-weight: $font-weight-black;
+    text-transform: uppercase;
+}
+
+h4, .h4 {
+    font-weight: $font-weight-bold;
+}
+
+h3, .h3,
+h5, .h5,
+h6, .h6 {
+    font-weight: $font-weight-medium;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    .hrc-footer & {
+        color: $white;
+    }
+}
+
+a {
+    h1 > &, .h1 > &,
+    h2 > &, .h2 > &,
+    h3 > &, .h3 > &,
+    h4 > &, .h4 > &,
+    h5 > &, .h5 > &,
+    h6 > &, .h6 > & {
+        color: $header-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $header-color;
+            text-decoration: underline;
+        }
+    }
+
+    h1 > &, .h1 > &,
+    h2 > &, .h2 > & {
+        font-weight: $font-weight-black;
+    }
+
+    h4 > &, .h4 > & {
+        font-weight: $font-weight-bold;
+    }
+
+    h3 > &, .h3 > &,
+    h5 > &, .h5 > &,
+    h6 > &, .h6 > & {
+        font-weight: $font-weight-medium;
+    }
+}
+
+.reveal {
+    & > .close-button {
+        font-size: rem-calc(20);
+        right: rem-calc(10);
+        top: rem-calc(9);
+    }
+}
+
+a {
+    font-weight: $font-weight-medium;
+}

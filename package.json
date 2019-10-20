@@ -1,0 +1,42 @@
+{
+  "name": "hchrc",
+  "version": "1.0.0",
+  "description": "Hudson County Housing Resource Center Theme",
+  "main": "gulpfile.babel.js",
+  "dependencies": {
+    "foundation-sites": "6.5.3",
+    "gutenberg-css": "0.5.0",
+    "jquery": "3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/register": "7.5.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "8.0.6",
+    "browser-sync": "2.26.3",
+    "cli-color": "1.4.0",
+    "config-yml": "0.10.2",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-filter": "6.0.0",
+    "gulp-if": "3.0.0",
+    "gulp-install": "1.1.0",
+    "gulp-load-plugins": "2.0.1",
+    "gulp-sass": "4.0.2",
+    "gulp-size": "3.0.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "motion-ui": "2.0.3",
+    "node-sass": "4.12.0",
+    "what-input": "5.2.3"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Fernando Tessmann",
+  "license": "None",
+  "private": true
+}

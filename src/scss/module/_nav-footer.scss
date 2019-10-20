@@ -1,0 +1,12 @@
+a.hrc-nav-footer-link {
+    color: $light-gray;
+    font-weight: $font-weight-regular;
+    line-height: $paragraph-lineheight;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+        color: $light-gray;
+        text-decoration: underline;
+    }
+}

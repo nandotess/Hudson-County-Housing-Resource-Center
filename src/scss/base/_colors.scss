@@ -1,0 +1,21 @@
+$foundation-palette: (
+    primary: #1779ba, /* Not defined by design */
+    secondary: #767676, /* Not defined by design */
+    success: #3adb76, /* Not defined by design */
+    warning: #ffae00, /* Not defined by design */
+    alert: #cc4b37, /* Not defined by design */
+);
+
+$light-gray: #D6D6D6;
+$medium-gray: #B7B7B7; /* Not defined by design */
+$dark-gray: #595959;
+
+$black: #000000;
+$white: #FFFFFF;
+
+$marine: #082C59;
+$iris: #6C67B8;
+$iris-60: darken(#9794CD, 2%); /* It was necessary to make it darker because of accessibility contrast issues */
+$pastel-red: #F74440;
+$pastel-red-60: darken(#F97B78, 5%); /* It was necessary to make it darker because of accessibility contrast issues */
+$green-blue: darken(#0AC693, 7%); /* It was necessary to make it darker because of accessibility contrast issues */

@@ -1,0 +1,12 @@
+$section-padding-mobile: rem-calc(40);
+$section-padding-desktop: rem-calc(80);
+
+// Header
+
+$header-height-mobile: rem-calc(65);
+$header-height-mobile-sticky: $header-height-mobile;
+
+$header-height-desktop: rem-calc(120);
+$header-height-desktop-sticky: rem-calc(100);
+
+$header-transition: all 250ms ease-out;

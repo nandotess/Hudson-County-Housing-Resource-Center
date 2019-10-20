@@ -1,0 +1,9 @@
+hr.hrc-spacer {
+	margin: rem-calc(20) auto;
+
+	&:not(.is-admin) {
+		border-bottom: 0;
+		margin: 0 auto;
+		padding: rem-calc(20) 0;
+	}
+}

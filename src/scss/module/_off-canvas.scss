@@ -1,0 +1,39 @@
+.hrc-off-canvas {
+    background-color: $white;
+    box-shadow: 0 rem-calc(3) rem-calc(6) 0 rgba($black, 0.16) important;
+
+    // Make the off canvas menu full-height
+    .grid-container > .grid-x:last-of-type {
+        height: calc(100vh - #{$header-height-mobile});
+
+        @include breakpoint(tablet) {
+            height: calc(100vh - #{$header-height-desktop});
+        }
+    }
+}
+
+// Make the off canvas menu full-height
+.position-top {
+    bottom: 0;
+    height: 100vh;
+    transform: translateY(-100vh);
+}
+
+.off-canvas.is-open {
+    transform: translate(0, 0) !important;
+}
+
+.hrc-off-canvas-close-button {
+    @include hrc-header-height;
+
+    color: $marine;
+    font-size: rem-calc(50);
+    position: relative;
+    right: auto;
+    top: auto;
+
+    &:hover,
+    &:focus {
+        color: $marine;
+    }
+}

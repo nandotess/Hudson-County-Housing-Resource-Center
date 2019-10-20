@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+// START // @import 'vendor/index';
+
+    @import 'base/colors';
+    @import 'base/fonts';
+
+    // Foundation (local settings)
+    @import 'vendor/foundation-settings';
+    // Foundation (NPM)
+    @import 'foundation';
+    @import 'motion-ui';
+
+    // Restrict to WP preview
+    .editor-rich-text,
+    .acf-block-preview {
+        // Foundation (NPM)
+        @include foundation-everything();
+        @include motion-ui-transitions;
+        @include motion-ui-animations;
+    }
+
+// END // @import 'vendor/index';
+
+// Restrict to WP preview
+.editor-rich-text,
+.acf-block-preview {
+    @import 'base/index';
+    @import 'layout/index';
+    @import 'module/index';
+    // @import 'state/index';
+    // @import 'theme/index';
+}
+
+// ### Custom styles for Wordpress ###
+
+.wp-block {
+    // Foundation body{} styles
+    font-family: $font-roboto;
+    font-weight: normal;
+    line-height: $global-lineheight;
+    color: $dark-gray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Force blocks to have alignment set to full
+    max-width: $global-width !important;
+}

@@ -1,0 +1,96 @@
+.hrc-comp-image-and-text {
+    padding: 0;
+}
+
+.hrc-comp-image-and-text-row {
+	padding: $section-padding-mobile 0;
+
+    @include breakpoint(tablet) {
+        padding: $section-padding-desktop 0;
+	}
+
+	&.right-left {
+		@include breakpoint(tablet) {
+			text-align: right;
+		}
+	}
+
+	&.image-content {
+		background-image: none !important;
+	}
+
+	&.image-bg {
+		@include breakpoint(medium down) {
+			background-image: none !important;
+		}
+
+		@include breakpoint(tablet) {
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&.darker {
+				position: relative;
+
+				&:after {
+					bottom: 0;
+					content: '';
+					background-image: linear-gradient(to right, rgba($white, 0.7), rgba($white, 0.2));
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+
+				&.right-left {
+					&:after {
+						background-image: linear-gradient(to left, rgba($white, 0.7), rgba($white, 0.2));
+					}
+				}
+
+				& > .cell {
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
+.hrc-comp-image-and-text-image-img {
+	margin-bottom: rem-calc(30);
+
+	@include breakpoint(tablet) {
+		margin-bottom: 0;
+	}
+
+	&.image-bg {
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
+}
+
+.hrc-comp-image-and-text-title {
+	&.lighter {
+		@include breakpoint(tablet) {
+			color: $white;
+		}
+	}
+}
+
+.hrc-comp-image-and-text-text {
+	text-transform: none;
+
+	&.lighter {
+		@include breakpoint(tablet) {
+			color: $white;
+		}
+	}
+
+    &:last-child {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

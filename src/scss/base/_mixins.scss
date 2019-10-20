@@ -1,0 +1,37 @@
+// On window.scroll, the header changes size
+// This mixin is applied to key child elements to create the effect as expected
+@mixin hrc-header-height() {
+    height: $header-height-mobile;
+    transition: $header-transition;
+
+    @include breakpoint(large) {
+        height: $header-height-desktop;
+    }
+
+    body.hrc-sticky-header & {
+        height: $header-height-mobile-sticky;
+
+        @include breakpoint(large) {
+            height: $header-height-desktop-sticky;
+        }
+    }
+}
+
+// On pages with no masthead, the header should not overlap the body
+// This mixin is applied to key child elements to create the effect as expected
+@mixin hrc-body-margin-top() {
+    margin-top: $header-height-mobile;
+    transition: $header-transition;
+
+    @include breakpoint(large) {
+        margin-top: $header-height-desktop;
+    }
+
+    body.hrc-sticky-header & {
+        margin-top: $header-height-mobile-sticky;
+
+        @include breakpoint(large) {
+            margin-top: $header-height-desktop-sticky;
+        }
+    }
+}

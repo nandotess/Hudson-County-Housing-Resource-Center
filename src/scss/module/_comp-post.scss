@@ -1,0 +1,23 @@
+.hrc-comp-post {
+	margin-bottom: rem-calc(30);
+}
+
+.hrc-comp-post-image {
+	margin-bottom: rem-calc(15);
+	width: 100%;
+
+    @include breakpoint(medium) {
+		margin-bottom: 0;
+		width: rem-calc(200);
+	}
+}
+
+.hrc-comp-post-category {
+	color: $pastel-red;
+	margin-bottom: rem-calc(15);
+	text-transform: uppercase;
+}
+
+.hrc-comp-post-title {
+	margin-bottom: rem-calc(15);
+}

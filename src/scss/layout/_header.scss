@@ -1,0 +1,46 @@
+.hrc-header {
+    background-color: $white;
+    box-shadow: 0 rem-calc(1) rem-calc(3) 0 rgba($black, 0.16);
+    position: fixed;
+    top: 0;
+    transition: $header-transition;
+    width: 100%;
+    z-index: 2;
+
+    body.hrc-sticky-header & {
+		box-shadow: 0 rem-calc(2) rem-calc(6) 0 rgba($black, 0.16);
+    }
+
+    & > .grid-container > .grid-x {
+        @include hrc-header-height;
+    }
+}
+
+.hrc-header-logo {
+    background: transparent url(../img/logo.png) no-repeat center center;
+    background-size: rem-calc(65) rem-calc(35);
+    display: block;
+	height: rem-calc(35);
+	margin-top: rem-calc(-5);
+    text-indent: rem-calc(-9999);
+    transition: $header-transition;
+    width: rem-calc(65);
+
+    @include breakpoint(large) {
+        background-size: rem-calc(133.3) rem-calc(72);
+        height: rem-calc(72);
+        width: rem-calc(133.3);
+    }
+}
+
+.hrc-header-buttons {
+    @include breakpoint(large) {
+        margin-left: rem-calc(15);
+    }
+}
+
+.hrc-header-button {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

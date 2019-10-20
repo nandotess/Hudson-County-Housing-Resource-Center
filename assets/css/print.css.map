@@ -1,0 +1,1 @@
+{"version":3,"sources":["print.scss","print/_print-styles.scss"],"names":[],"mappings":"AAGA,iCAAiC;ACHjC,OACC,uBAAuB,EAAA","file":"print.css","sourcesContent":["@charset 'utf-8';\r\n\r\n// Gutenberg\r\n@import 'gutenberg.min.css' print;\r\n\r\n// HRC\r\n@import 'print/print-styles';\r\n","html {\r\n\tbackground-color: white;\r\n}\r\n"]}

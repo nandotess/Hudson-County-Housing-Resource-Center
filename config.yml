@@ -1,0 +1,51 @@
+# Paths
+paths:
+  site: "."
+
+  # Source folders
+  src: "${paths.site}/src"
+  src_sass: "${paths.src}/scss/main.scss"
+  src_sass_print: "${paths.src}/scss_print/print.scss"
+  src_sass_editor: "${paths.src}/scss/editor.scss"
+
+  # Dist folders
+  dist: "${paths.site}/assets"
+  dist_css: "${paths.dist}/css"
+  dist_js:
+    folder: "${paths.dist}/js"
+    file: "main.js"
+
+  # NPM - JS
+  npm_js:
+    # jQuery
+    - "node_modules/jquery/dist/jquery.js"
+    # Foundation
+    - "node_modules/foundation-sites/dist/js/foundation.js"
+
+  # NPM - CSS
+  npm_css:
+    # Gutenberg
+    - "node_modules/gutenberg-css/dist/gutenberg.min.css"
+
+  # NPM - Paths to Sass libraries, which can then be loaded with @import
+  npm_sass:
+    # Foundation
+    - "node_modules/foundation-sites/scss"
+    - "node_modules/motion-ui/src"
+
+# Compile helpers
+helpers:
+  all_sass: "${paths.src}/scss/**/*.scss"
+  all_sass_print: "${paths.src}/scss_print/**/*.scss"
+  all_js:
+    - "${paths.src}/js/plugins/*.js"
+    - "${paths.src}/js/app/*.js"
+    - "${paths.src}/js/vendor/*.js"
+
+# NPM - Foundation
+foundation:
+  settings:
+    src: "node_modules/foundation-sites/scss/settings/_settings.scss"
+    dist:
+      folder: "${paths.src}/scss/vendor"
+      file: "_foundation-settings.scss"
